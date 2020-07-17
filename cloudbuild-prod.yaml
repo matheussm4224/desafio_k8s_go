@@ -16,7 +16,7 @@ steps:
     - "gcr.io/$PROJECT_ID/app_go:$SHORT_SHA"
     - "."
 - id: "pushing image"
-  name: "grc.io/cloud-builders/docker"
+  name: "gcr.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/app_go:$SHORT_SHA"]
 
 - id: "environment deployment"
