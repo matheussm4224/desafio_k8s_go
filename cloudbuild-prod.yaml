@@ -8,10 +8,13 @@ steps:
   name: "gcr.io/cloud-builders/docker"
   args: ['exec', '-t', 'app_go', 'go', 'test']
 
-- id: "build app go "
+- id: "build app go"
   name: "grc.io/cloud-builders/docker"
-  args: ["build", "-t", "gcr.io/$PROJECT_ID/app_go:$SHORT_SHA", '.']
-
+  args:
+    - "build"
+    - "-t"
+    - "gcr.io/$PROJECT_ID/app_go:$SHORT_SHA"
+    - "."
 - id: "pushing image"
   name: "grc.io/cloud-builders/docker"
   args: ["push", "gcr.io/$PROJECT_ID/app_go:$SHORT_SHA"]
