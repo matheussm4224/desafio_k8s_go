@@ -9,7 +9,7 @@ steps:
   args: ['exec', '-t', 'app_go', 'go', 'test']
 
 - id: "build app go"
-  name: "grc.io/cloud-builders/docker"
+  name: "gcr.io/cloud-builders/docker"
   args:
     - "build"
     - "-t"
