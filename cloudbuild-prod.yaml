@@ -25,8 +25,8 @@ steps:
   args: 
     - '-c'
     - |
-        sed 's#img_app_go#gcr.io/$PROJECT_ID/app_go:$SHORT_SHA#g' k8s/app/deployment.yaml;
-        cat k8s/app/deployment.yaml;
+        sed 's#img_app_go#gcr.io/$PROJECT_ID/app_go:$SHORT_SHA#g' k8s/deployment.yaml;
+        cat k8s/deployment.yaml;
 
 - id: "deployment k8s"
   name: 'gcr.io/cloud-builders/kubectl'
