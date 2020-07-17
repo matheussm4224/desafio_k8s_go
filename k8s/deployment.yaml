@@ -17,5 +17,5 @@ spec:
       - name: app-go
         image: img_app_go
         ports:
-          containerPort: 8000
+        - containerPort: 8000
 
