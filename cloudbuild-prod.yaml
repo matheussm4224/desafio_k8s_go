@@ -24,7 +24,7 @@ steps:
   entrypoint: '/bin/sh'
   args: 
     - '-c'
-    - 'sed s#gcr.io/$PROJECT_ID/app_go:$SHORT_SHA#g /k8s/deployment.yaml'
+    - "sed 's#gcr.io/$PROJECT_ID/app_go:$SHORT_SHA#g' /k8s/deployment.yaml'"
 
 - id: "deployment k8s"
   name: 'gcr.io/cloud-builders/kubectl'
