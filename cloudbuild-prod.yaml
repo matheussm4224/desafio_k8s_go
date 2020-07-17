@@ -23,6 +23,7 @@ steps:
   name: 'gcr.io/cloud-builders/gcloud'
   entrypoint: '/bin/sh'
   args: 
+    - '-i'
     - '-c'
     - |
         sed 's#img_app_go#gcr.io/$PROJECT_ID/app_go:$SHORT_SHA#g' k8s/deployment.yaml;
